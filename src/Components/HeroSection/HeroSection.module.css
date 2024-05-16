@@ -1,0 +1,50 @@
+.hero {
+    background-color: #f9f4e3;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .text h1 {
+    font-size: 3rem;
+    color: #7a6448;
+    margin-bottom: 20px;
+  }
+  
+  .text p {
+    font-size: 1.5rem;
+    color: #7a6448;
+  }
+  
+  .animation {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .animation:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background-image: url('path/to/coco-animation.gif');
+    background-size: cover;
+    background-position: top center;
+    animation: coco-falling 4s linear infinite;
+    transform: translateX(-50%);
+  }
+  
+  @keyframes coco-falling {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    50% {
+      transform: translateX(-50%) translateY(100%);
+    }
+    100% {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+  
